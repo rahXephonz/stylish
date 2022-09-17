@@ -1,5 +1,5 @@
-import Ts from "rollup-plugin-typescript2";
-import { getFiles } from "./scripts/buildUtils";
+import Typescript from "rollup-plugin-typescript2";
+import { getFiles } from "./scripts/getFiles";
 
 const extensions = [".js", ".ts", ".jsx", ".tsx"];
 
@@ -10,7 +10,7 @@ export default {
     format: "esm",
     sourcemap: true,
   },
-  plugins: [Ts()],
+  plugins: [Typescript()],
   preserveModules: true,
   external: ["react"],
 };

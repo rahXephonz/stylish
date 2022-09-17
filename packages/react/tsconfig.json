@@ -20,6 +20,6 @@
     "declaration": true,
     "moduleResolution": "node"
   },
-  "include": ["src", "scripts/buildUtils.js"],
+  "include": ["src"],
   "exclude": ["node_modules", "lib"]
 }

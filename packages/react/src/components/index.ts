@@ -1,2 +1,4 @@
-export * from "./Button";
-export * from "./Tooltip";
+import Button from "./Button";
+import Tooltip from "./Tooltip";
+
+export { Button, Tooltip };
