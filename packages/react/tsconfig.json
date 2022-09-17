@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "module": "esnext",
+    "lib": ["DOM", "ESNext"],
+    "allowJs": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "strict": false,
+    "target": "esnext",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src", "scripts/buildUtils.js"],
+  "exclude": ["node_modules", "lib"]
+}
