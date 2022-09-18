@@ -1,7 +1,7 @@
 import React from "react";
 
 const Button = () => {
-  return <div>Button With no style</div>;
+  return <button type="button">Button With no style</button>;
 };
 
 export default Button;

@@ -21,7 +21,10 @@
     "declaration": true,
     "moduleResolution": "node",
     "baseUrl": "src/",
-    "paths": {}
+    "paths": {
+      "layout/*": ["layout/*"],
+      "system/*": ["system/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "scripts"]
