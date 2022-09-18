@@ -51,6 +51,7 @@ module.exports = {
     "import/resolver": {
       node: {
         extensions: [".js", ".mjs", ".jsx", ".ts", ".tsx", ".json"],
+        moduleDirectory: ["node_modules", "src/"],
       },
       typescript: {},
     },
