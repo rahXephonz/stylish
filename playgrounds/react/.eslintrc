@@ -1,15 +1,5 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
+  "extends": "../../.eslintrc.js",
   "rules": {
     "@typescript-eslint/ban-ts-comment": "warn",
     "comma-dangle": "off",
@@ -19,6 +9,7 @@
     "react/prop-types": "off",
     "react/no-unescaped-entities": "off",
     "react/display-name": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": ["off"]
   }
 }

@@ -12,5 +12,5 @@ export default {
   },
   plugins: [Typescript()],
   preserveModules: true,
-  external: ["react"],
+  external: ["react", "@stylish-ui/core"],
 };
