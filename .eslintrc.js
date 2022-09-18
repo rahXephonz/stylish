@@ -1,5 +1,13 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
+  extends: [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+  ],
+  plugins: ["@typescript-eslint"],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
@@ -12,23 +20,8 @@ module.exports = {
       version: "detect",
     },
   },
-  extends: [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-  ],
-  overides: [
-    {
-      rules: {
-        "react/prop-types": "off",
-      },
-    },
-  ],
   rules: {
     "dot-notation": "off",
-    "jsx-a11y/anchor-is-valid": "off",
-    "jsx-a11y/label-has-associated-control": "off",
     "react/jsx-closing-tag-location": "off",
     "react/jsx-curly-brace-presence": "off",
     "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
@@ -41,20 +34,5 @@ module.exports = {
 
     // Require or disallow a space immediately following the // or /* in a comment
     // https://eslint.org/docs/rules/spaced-comment
-    "spaced-comment": [
-      "error",
-      "always",
-      {
-        line: {
-          exceptions: ["-", "+"],
-          markers: ["=", "!", "#region", "#endregion", "/"], // space here to support sprockets directives and typescript reference comments
-        },
-        block: {
-          exceptions: ["-", "+"],
-          markers: ["=", "!", "#region", "#endregion", ":", "::"], // space here to support sprockets directives and flow comment types
-          balanced: true,
-        },
-      },
-    ],
   },
 };
