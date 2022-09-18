@@ -8,10 +8,11 @@
     "build": "rollup -c",
     "dev": "yarn build --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^17.0.2"
+  },
   "devDependencies": {
     "@types/react": "^17.0.37",
-    "react": "^17.0.2",
     "rollup": "^2.22.1",
     "rollup-plugin-typescript2": "^0.27.1",
     "styled-components": "^5.1.0",
