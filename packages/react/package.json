@@ -13,6 +13,7 @@
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
+    "csstype": "^3.0.9",
     "react": "^17.0.2"
   },
   "devDependencies": {
@@ -27,6 +28,8 @@
     "babel-plugin-styled-components": "^1.13.2",
     "babel-preset-react-app": "^10.0.0",
     "rollup": "^2.22.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-node-externals": "^5.0.0",
     "rollup-plugin-typescript2": "^0.27.1",
     "styled-components": "^5.1.0",
     "typescript": "^4.5.2"

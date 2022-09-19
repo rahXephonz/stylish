@@ -3,9 +3,9 @@
     "outDir": "dist",
     "module": "esnext",
     "lib": ["DOM", "ESNext"],
+    "declarationDir": "dist/dts",
     "allowJs": true,
     "jsx": "react",
-    "rootDir": "src",
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "strict": false,
@@ -20,12 +20,8 @@
     "noUnusedParameters": true,
     "declaration": true,
     "moduleResolution": "node",
-    "baseUrl": "src/",
-    "paths": {
-      "layout/*": ["layout/*"],
-      "system/*": ["system/*"]
-    }
+    "baseUrl": "./src"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "scripts"]
+  "exclude": ["node_modules", "dist"]
 }

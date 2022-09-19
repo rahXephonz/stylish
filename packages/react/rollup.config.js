@@ -1,23 +1,33 @@
-import Typescript from "rollup-plugin-typescript2";
-import { getFiles } from "./scripts/getFiles";
+import typescript from "rollup-plugin-typescript2";
+import externals from "rollup-plugin-node-externals";
+import dts from "rollup-plugin-dts";
 
-const extensions = [".js", ".ts", ".jsx", ".tsx"];
-
-export default {
-  input: ["src/index.ts", ...getFiles("./src/components", extensions), ...getFiles("./src/layout", extensions)],
-  output: {
-    dir: "dist",
-    format: "esm",
-    sourcemap: true,
+export default [
+  {
+    input: ["src/index.ts"],
+    output: {
+      dir: "dist",
+      format: "esm",
+      sourcemap: true,
+    },
+    plugins: [
+      typescript(),
+      externals({
+        devDeps: false,
+      }),
+    ],
+    preserveModules: true,
+    external: ["react", "@stylish-ui/core", "styled-system", "styled-components"],
   },
-  plugins: [Typescript()],
-  preserveModules: true,
-  external: [
-    "react",
-    "@stylish-ui/core",
-    "styled-system",
-    "styled-components",
-    "@styled-system/css",
-    "@styled-system/should-forward-prop",
-  ],
-};
+  {
+    input: ["src/index.ts"],
+    output: [{ file: "dist/index.d.ts", format: "es" }],
+    plugins: [
+      dts({
+        compilerOptions: {
+          baseUrl: "./src",
+        },
+      }),
+    ],
+  },
+];
