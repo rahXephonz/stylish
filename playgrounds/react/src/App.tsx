@@ -1,4 +1,4 @@
-import { Tooltip, IconButton, Button, Box } from "@stylish-ui/react";
+import { Tooltip, IconButton, Box, Button } from "@stylish-ui/react";
 
 export default function App() {
   return (
