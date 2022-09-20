@@ -1,6 +1,7 @@
 import typescript from "rollup-plugin-typescript2";
 import externals from "rollup-plugin-node-externals";
 import dts from "rollup-plugin-dts";
+import visualizer from "rollup-plugin-visualizer";
 
 export default [
   {
@@ -12,6 +13,12 @@ export default [
     },
     plugins: [
       typescript(),
+
+      visualizer({
+        filename: "bundle-analysis.html",
+        open: true,
+      }),
+
       externals({
         devDeps: false,
       }),
