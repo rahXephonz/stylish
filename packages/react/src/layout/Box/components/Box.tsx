@@ -10,7 +10,11 @@ import {
 } from "system";
 
 export interface BoxProps extends SxProps, AllSystemProps, PseudoSystemProps {
+  /** Additional CSS classes to add to the component. */
   className?: string;
+  /**
+   * Extended color props. We need this because default `color` prop clashes with `styled-system`.
+   */
   color?: string;
 }
 

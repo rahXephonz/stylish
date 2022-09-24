@@ -11,15 +11,24 @@
     "target": "esnext",
     "noEmit": true,
     "esModuleInterop": true,
+    "rootDir": "src",
     "resolveJsonModule": true,
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": false,
     "moduleResolution": "node",
-    "baseUrl": "./src"
+    "baseUrl": "src/",
+    "paths": {
+      "theme/*": ["theme/*"],
+      "components/*": ["components/*"],
+      "layout/*": ["layout/*"],
+      "utlis/*": ["utils/*"],
+      "system/*": ["system/*"]
+    }
   },
   "include": ["src", "@types"],
   "exclude": ["node_modules", "dist"]

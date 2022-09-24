@@ -187,7 +187,7 @@ export function pseudoSystemProps({
 }
 
 export interface SxProps {
-  sx?: Partial<Record<keyof AllSystemProps & PseudoSystemProps, unknown>>;
+  sx?: Partial<Record<keyof AllSystemProps & PseudoSystemProps, any>>;
 }
 
 export const sxMixin = (p: SxProps): CssFunctionReturnType | Record<string, never> => (p.sx ? css(p.sx) : {});

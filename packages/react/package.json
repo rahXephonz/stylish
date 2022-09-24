@@ -3,22 +3,35 @@
   "author": "Ioofy",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "stylish:src": "./src/index.ts",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
+    "build-storybook": "build-storybook --quiet",
     "dev": "yarn build --watch",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook --quiet"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "csstype": "^3.0.9",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-knobs": "^6.3.0",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "@storybook/theming": "^6.3.7",
     "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.26",
     "@types/styled-system": "^5.1.13",
     "@types/styled-system__css": "^5.0.16",

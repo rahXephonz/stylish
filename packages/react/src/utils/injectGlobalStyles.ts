@@ -1,23 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import OpenSauceBold from "fonts/OpenSauce-Bold.ttf";
-import OpenSauceMedium from "fonts/OpenSauce-Medium.ttf";
 
 const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: 'Open Sauce';
-    src: local('Open Sauce'), local('Open Sauce'),
-    url(${OpenSauceMedium}) format('ttf'),
-    url(${OpenSauceMedium}) format('ttf');
-    font-style: normal;
-  }
-
-   @font-face {
-    font-family: 'Open Sauce';
-    src: local('Open Sauce'), local('Open Sauce'),
-    url(${OpenSauceBold}) format('ttf'),
-    url(${OpenSauceBold}) format('ttf');
-    font-style: normal;
-  }
 
   html,
     body,
