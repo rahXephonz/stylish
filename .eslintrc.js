@@ -25,6 +25,9 @@ module.exports = {
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-wrap-multilines": "off",
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/no-unused-prop-types": 0,
 
     // Cannot use `Component.displayName` pattern on class components in TS.
     "react/static-property-placement": "off",
@@ -117,9 +120,6 @@ module.exports = {
             optionalDependencies: false,
           },
         ],
-
-        // No need to use prop types on TS files.
-        "react/prop-types": "off",
 
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
