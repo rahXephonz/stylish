@@ -16,7 +16,7 @@ export default [
 
       visualizer({
         filename: "bundle-analysis.html",
-        open: true,
+        open: process.env.ANALYZE,
       }),
 
       externals({

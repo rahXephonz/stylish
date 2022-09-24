@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import {
   allSystemProps,
@@ -12,7 +11,6 @@ import {
 
 export interface BoxProps extends SxProps, AllSystemProps, PseudoSystemProps {
   className?: string;
-  style?: React.CSSProperties;
   color?: string;
 }
 
