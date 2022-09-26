@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import { Story } from "@storybook/react";
 import { StylishProvider } from "../src";
 
 export const parameters = {
@@ -16,7 +17,7 @@ export const parameters = {
 };
 
 export const decorators = [
-  Story => (
+  (Story: Story) => (
     <StylishProvider>
       <Story />
     </StylishProvider>

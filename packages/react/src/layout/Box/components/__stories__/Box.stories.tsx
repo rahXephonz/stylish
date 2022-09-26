@@ -6,13 +6,14 @@ export default {
   component: Box,
 };
 
-export const BasicExample = () => <Box>I&apos;m inside a box!</Box>;
+export const Example = () => <Box>I&apos;m inside a box!</Box>;
 
 export const StyleProps = () => (
   <Box
     sx={{
-      backgroundColor: "blue",
+      backgroundColor: "skyblue",
       color: "white",
+      p: "5px",
     }}
   >
     This box is styled using CSS variables!
