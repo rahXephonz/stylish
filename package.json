@@ -8,14 +8,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "lerna run build",
     "dev": "lerna run dev",
-    "clean": "lerna run clean"
+    "clean": "lerna run clean",
+    "storybook": "yarn workspace @stylish-ui/react run storybook"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ioofy/stylish.git"
   },
   "keywords": [
-    "stylish",
+    "stylish-ui",
     "design-system"
   ],
   "author": "",
@@ -38,7 +39,12 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "lerna": "^3.22.1",
     "prettier": "^2.3.2",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "rollup": "^2.22.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-node-externals": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-visualizer": "^5.8.1"
   },
   "workspaces": {
     "packages": [

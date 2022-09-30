@@ -28,6 +28,7 @@ module.exports = {
     "react/prop-types": 0,
     "react/require-default-props": 0,
     "react/no-unused-prop-types": 0,
+    "@typescript-eslint/no-explicit-any": "off",
 
     // Cannot use `Component.displayName` pattern on class components in TS.
     "react/static-property-placement": "off",
