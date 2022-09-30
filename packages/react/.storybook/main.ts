@@ -15,6 +15,7 @@ module.exports = {
         layout: path.resolve(__dirname, "../src", "layout"),
         utils: path.resolve(__dirname, "../src", "utils"),
         system: path.resolve(__dirname, "../src", "system"),
+        interface: path.resolve(__dirname, "../src", "interface"),
       },
     };
 

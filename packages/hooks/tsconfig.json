@@ -5,6 +5,7 @@
     "lib": ["DOM", "ESNext"],
     "allowJs": true,
     "jsx": "react",
+    "noImplicitReturns": false,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "strict": false,
@@ -16,21 +17,12 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": false,
     "moduleResolution": "node",
-    "baseUrl": "src/",
-    "paths": {
-      "theme/*": ["theme/*"],
-      "components/*": ["components/*"],
-      "layout/*": ["layout/*"],
-      "utils/*": ["utils/*"],
-      "system/*": ["system/*"],
-      "interface/*": ["interface/*"]
-    }
+    "baseUrl": "src/"
   },
-  "include": ["src", "@types"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

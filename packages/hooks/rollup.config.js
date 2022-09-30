@@ -1,7 +1,5 @@
 import typescript from "rollup-plugin-typescript2";
-import externals from "rollup-plugin-node-externals";
 import dts from "rollup-plugin-dts";
-import visualizer from "rollup-plugin-visualizer";
 
 export default [
   {
@@ -15,18 +13,9 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
       }),
-
-      visualizer({
-        filename: "bundle-analysis.html",
-        open: process.env.ANALYZE && process.env.NODE_ENV === "development",
-      }),
-
-      externals({
-        devDeps: false,
-      }),
     ],
     preserveModules: true,
-    external: ["react", "@stylish-ui/core", "styled-system", "styled-components", "@stylish-ui/hooks"],
+    external: ["react", "are-passive-events-supported", "use-latest"],
   },
   {
     input: ["src/index.ts"],
