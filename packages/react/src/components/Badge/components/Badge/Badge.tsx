@@ -13,11 +13,10 @@ export interface BadgeProps extends Omit<BoxProps, "size"> {
   size?: "sm" | "md";
   /** The icon that renders with the badge */
   icon?: React.ComponentType<any>;
-  children?: React.ReactNode;
 }
 
 /** Badge text for entity, status, etc. */
-const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+const Badge = React.forwardRef<HTMLSpanElement, React.PropsWithChildren<BadgeProps>>(
   ({ className, style, variant = "default", size = "md", icon, children, sx, ...rest }, ref) => {
     const styles = useComponentStyles("badge", { variant, size });
 
