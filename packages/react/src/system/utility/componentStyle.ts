@@ -2,12 +2,12 @@ import css from "@styled-system/css";
 import deepmerge from "deepmerge";
 import runIfFn from "utils/runIfFn";
 import { isEqual } from "lodash";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, ComponentProps } from "react";
 import { get } from "styled-system";
 import { useTheme } from "styled-components";
 import type { ComponentThemeConfig } from "interface/Components";
 
-const getStyles = (config?: ComponentThemeConfig, props: any = {}) => {
+const getStyles = (config?: ComponentThemeConfig, props: ComponentProps<any> = {}) => {
   if (config) {
     const propToScaleMap = config.propToScaleMap ?? [];
 
@@ -30,16 +30,17 @@ const getStyles = (config?: ComponentThemeConfig, props: any = {}) => {
  * The result of which can then be passed to the `sx` prop.
  */
 
-export const useComponentStyles = (componentKey: string, props: any = {}) => {
+export const useComponentStyles = (componentKey: string, props: ComponentProps<any> = {}) => {
   const theme = useTheme();
+  const stylesRef = useRef({});
+
+  // get theme components from component styles
   const config = get(theme, `componentStyles.${componentKey}`);
 
   const allProps = useMemo(() => {
     const { children, ...rest } = props;
     return deepmerge.all([{ theme }, rest]);
   }, [props, theme]);
-
-  const stylesRef = useRef({});
 
   return useMemo(() => {
     const styles = getStyles(config, allProps);
@@ -56,7 +57,7 @@ export const useComponentStyles = (componentKey: string, props: any = {}) => {
  */
 
 export const componentStylesMixin = (componentKey: string) => {
-  return (props: any): any => {
+  return (props: ComponentProps<any>) => {
     const { children, theme, ...rest } = props;
 
     const config = get(theme, `componentStyles.${componentKey}`);
@@ -73,7 +74,7 @@ export const componentStylesMixin = (componentKey: string) => {
  */
 
 export const getBaseStyles = (componentKey: string) => {
-  return (props: any): any => {
+  return (props: ComponentProps<any>) => {
     const { theme } = props;
 
     const config = get(theme, `componentStyles.${componentKey}`);

@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 const storybookTheme = create({
   base: "light",
   // colorPrimary: "#f15878",
-  colorSecondary: "#f15878",
+  colorSecondary: "#ff74B1",
 
   // UI
   appBg: "#f5f5f5",
@@ -20,7 +20,7 @@ const storybookTheme = create({
   // Toolbar default and active colors
   barTextColor: "white",
   barSelectedColor: "#000",
-  barBg: "#f15878",
+  barBg: "#ff74B1",
 
   brandTitle: "💅Stylish UI",
   brandUrl: "https://github.com/ioofy/stylish",

@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/ban-types
-const isFunction = (value: unknown): value is Function => {
+const isFunction = (value: any): value is Function => {
   return typeof value === "function";
 };
 
