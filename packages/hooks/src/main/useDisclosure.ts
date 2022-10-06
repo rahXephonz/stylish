@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-const usePopup = (defaultValue?: boolean) => {
+export const usePopup = (defaultValue?: boolean) => {
   // trigger that will used
   const [isOpen, setIsOpen] = useState<boolean>(defaultValue || false);
 
@@ -17,7 +17,7 @@ const usePopup = (defaultValue?: boolean) => {
   };
 };
 
-const useToggle = (defaultValue?: boolean) => {
+export const useToggle = (defaultValue?: boolean) => {
   // trigger that will used
   const [isToggle, setIsToggle] = useState<boolean>(defaultValue || false);
 
@@ -26,5 +26,3 @@ const useToggle = (defaultValue?: boolean) => {
 
   return [isToggle, onToggle];
 };
-
-export default { usePopup, useToggle };

@@ -16,7 +16,7 @@ export default {
   },
 };
 
-export const Example: Story<WrapProps> = ({ spacing }) => {
+const Template: Story<React.PropsWithChildren<WrapProps>> = ({ spacing }) => {
   return (
     <Box width={300}>
       <Wrap spacing={spacing}>
@@ -46,6 +46,8 @@ export const Example: Story<WrapProps> = ({ spacing }) => {
   );
 };
 
-Example.args = {
+export const Examples = Template.bind({});
+
+Examples.args = {
   spacing: "xs",
 };

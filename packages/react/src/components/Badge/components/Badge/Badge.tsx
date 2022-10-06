@@ -4,20 +4,20 @@ import { useComponentStyles } from "system/utility";
 
 export interface BadgeProps extends Omit<BoxProps, "size"> {
   /** Additional CSS classes to give to the component. */
-  className?: string;
-  /** Additional CSS properties to give to the component. */
-  style?: React.CSSProperties;
+  className: string;
   /** The variant options available for a badge. Defaults to 'default' */
-  variant?: "default" | "info" | "warning" | "critical" | "success" | "active";
+  variant: "default" | "info" | "warning" | "critical" | "success" | "active";
   /** Size of the badge. Defaults to 'md' */
-  size?: "sm" | "md";
+  size: "sm" | "md";
   /** The icon that renders with the badge */
-  icon?: React.ComponentType<any>;
+  icon: React.ComponentType<any>;
+  /** Children is any jsx elements or constructor */
+  children: React.ReactNode;
 }
 
 /** Badge text for entity, status, etc. */
-const Badge = React.forwardRef<HTMLSpanElement, React.PropsWithChildren<BadgeProps>>(
-  ({ className, style, variant = "default", size = "md", icon, children, sx, ...rest }, ref) => {
+const Badge = React.forwardRef<HTMLSpanElement, Partial<BadgeProps>>(
+  ({ className, variant = "default", size = "md", icon, children, sx, ...rest }, ref) => {
     const styles = useComponentStyles("badge", { variant, size });
 
     const renderInner = () => {
@@ -34,7 +34,7 @@ const Badge = React.forwardRef<HTMLSpanElement, React.PropsWithChildren<BadgePro
     };
 
     return (
-      <Box as={icon ? "div" : "span"} ref={ref} className={className} style={style} sx={{ ...styles, ...sx }} {...rest}>
+      <Box as={icon ? "div" : "span"} ref={ref} className={className} sx={{ ...styles, ...sx }} {...rest}>
         {renderInner()}
       </Box>
     );

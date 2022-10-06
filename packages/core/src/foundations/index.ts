@@ -1,7 +1,9 @@
-import space, { type Space } from "./space";
-import typography, { type FontSizes, type Fonts, type LineHeights } from "./typography";
+import colors, { Colors } from "./colors";
+import space, { Space } from "./space";
+import typography, { Fonts, FontSizes, LineHeights } from "./typography";
 
 export type Foundations = {
+  colors: Colors;
   space: Space;
   sizes: Space;
   fonts: Fonts;
@@ -9,9 +11,10 @@ export type Foundations = {
   lineHeights: LineHeights;
 };
 
-export type { Space };
+export type { Colors, Space, Fonts, FontSizes, LineHeights };
 
 const foundations: Foundations = {
+  colors,
   space,
   sizes: space,
   ...typography,

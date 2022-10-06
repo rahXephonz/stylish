@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
       font-family: ${p => p.theme.fonts.system};
+      background-color: ${p => p.theme.colors["bg-secondary"]};
     }
     a {
       color: inherit;

@@ -8,9 +8,13 @@ import WrapItem from "./WrapItem";
 type Space = keyof typeof theme["space"];
 
 export interface WrapProps extends BoxProps, React.ComponentPropsWithoutRef<"div"> {
+  /** Alignment for items */
   alignItems?: CSS.Property.AlignItems;
+  /** Content Justify for items */
   justifyContent?: CSS.Property.JustifyContent;
+  /** Spacing for element usually using number or string */
   spacing?: Space | CSS.Property.Margin;
+  /** JSX Elements or any constructor */
   shouldWrapChildren?: boolean;
 }
 
