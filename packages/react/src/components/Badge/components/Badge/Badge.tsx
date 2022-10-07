@@ -1,22 +1,24 @@
 import React from "react";
+
 import { Box, BoxProps } from "layout/Box";
-import { useComponentStyles } from "system/utility";
+import { useComponentStyles } from "system";
+import { Text } from "typography";
 
 export interface BadgeProps extends Omit<BoxProps, "size"> {
   /** Additional CSS classes to give to the component. */
-  className: string;
+  className?: string;
   /** The variant options available for a badge. Defaults to 'default' */
-  variant: "default" | "info" | "warning" | "critical" | "success" | "active";
+  variant?: "default" | "info" | "warning" | "critical" | "success" | "active";
   /** Size of the badge. Defaults to 'md' */
-  size: "sm" | "md";
+  size?: "sm" | "md";
   /** The icon that renders with the badge */
-  icon: React.ComponentType<any>;
-  /** Children is any jsx elements or constructor */
-  children: React.ReactNode;
+  icon?: React.ComponentType<any>;
+  /** JSX Elements or any constructor */
+  children?: React.ReactNode;
 }
 
 /** Badge text for entity, status, etc. */
-const Badge = React.forwardRef<HTMLSpanElement, Partial<BadgeProps>>(
+const Badge = React.forwardRef<HTMLSpanElement, React.PropsWithChildren<BadgeProps>>(
   ({ className, variant = "default", size = "md", icon, children, sx, ...rest }, ref) => {
     const styles = useComponentStyles("badge", { variant, size });
 
@@ -25,7 +27,7 @@ const Badge = React.forwardRef<HTMLSpanElement, Partial<BadgeProps>>(
         return (
           <>
             {React.createElement(icon, { fill: "currentColor", size: 14, "aria-hidden": true })}
-            <p>{children}</p>
+            <Text scale={300}>{children}</Text>
           </>
         );
       }

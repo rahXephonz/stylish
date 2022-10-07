@@ -28,7 +28,8 @@
       "layout/*": ["layout/*"],
       "utils/*": ["utils/*"],
       "system/*": ["system/*"],
-      "interface/*": ["interface/*"]
+      "interface/*": ["interface/*"],
+      "typography/*": ["typography/*"]
     }
   },
   "include": ["src", "@types"],

@@ -100,6 +100,7 @@ export const pseudoSelectors = {
   _selection: "&::selection",
 };
 
+/** Pseudo system props */
 export type PseudoSystemProps = Partial<Record<keyof typeof pseudoSelectors, AllSystemProps>>;
 
 export function pseudoSystemProps({

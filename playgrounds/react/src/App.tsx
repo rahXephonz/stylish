@@ -1,4 +1,4 @@
-import { IconButton, Box, Stack, Wrap, WrapItem } from "@stylish-ui/react";
+import { IconButton, Box, Stack, Wrap, WrapItem, Text } from "@stylish-ui/react";
 import "./index.css";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
     >
       <Stack spacing="lg" direction="vertical">
         <Box>
-          <p>Hello Worldsssssss</p>
+          <Text scale={300}>Hello Worldsssssss</Text>
         </Box>
         <Box>
           <IconButton />
