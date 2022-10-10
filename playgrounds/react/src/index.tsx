@@ -11,7 +11,7 @@ const renderRoot = createRoot(rootElement as RootElement);
 
 renderRoot.render(
   <React.StrictMode>
-    <StylishProvider>
+    <StylishProvider disableInject>
       <App />
     </StylishProvider>
   </React.StrictMode>
