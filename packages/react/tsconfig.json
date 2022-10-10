@@ -29,9 +29,10 @@
       "utils/*": ["utils/*"],
       "system/*": ["system/*"],
       "interface/*": ["interface/*"],
-      "typography/*": ["typography/*"]
+      "typography/*": ["typography/*"],
+      "stories/*": ["stories/*"]
     }
   },
   "include": ["src", "@types"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["dist", "node_modules"]
 }

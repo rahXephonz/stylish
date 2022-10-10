@@ -2,6 +2,7 @@ import typescript from "rollup-plugin-typescript2";
 import externals from "rollup-plugin-node-externals";
 import dts from "rollup-plugin-dts";
 import visualizer from "rollup-plugin-visualizer";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   {
@@ -12,8 +13,12 @@ export default [
       sourcemap: true,
     },
     plugins: [
-      typescript({
-        tsconfig: "./tsconfig.json",
+      typescript(),
+
+      terser({
+        compress: true,
+        module: true,
+        toplevel: false,
       }),
 
       visualizer({
