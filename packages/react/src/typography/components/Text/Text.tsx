@@ -11,7 +11,7 @@ import {
   componentStylesMixin,
   PseudoSystemProps,
 } from "system";
-import { props } from "utils";
+import { textProps } from "utils";
 
 export type TextScale = 500 | 400 | 300 | 200;
 
@@ -26,7 +26,7 @@ export interface TextProps<ThemeType extends Theme = RequiredTheme> extends SxPr
  * This is a base `Text` element to handle typography elements.
  */
 const Text = styled("span").withConfig<TextProps>({
-  shouldForwardProp: sfp(props.textProps),
+  shouldForwardProp: sfp(textProps),
 })(componentStylesMixin("text"), sxMixin, allSystemProps, pseudoSystemProps);
 
 Text.displayName = "Text";

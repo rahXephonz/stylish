@@ -1,3 +1,1 @@
-const textProps = ["scale"];
-
-export default { textProps };
+export const textProps = ["scale"];
