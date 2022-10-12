@@ -15,7 +15,7 @@ export default {
       options: Object.keys(theme.fonts),
     },
     fontWeight: {
-      options: ["2xl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"],
+      options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
 };
@@ -27,5 +27,6 @@ const Template: Story<HeadingProps> = ({ scale, fontFamily, fontWeight }) => (
 export const Example = Template.bind({});
 Example.args = {
   scale: "2xl",
+  fontWeight: 300,
   fontFamily: "system",
 };

@@ -16,7 +16,7 @@ export default {
       options: Object.keys(theme.fonts),
     },
     fontWeight: {
-      options: ["2xl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"],
+      options: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
 };
