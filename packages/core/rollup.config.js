@@ -20,8 +20,9 @@ export default [
         toplevel: false,
       }),
     ],
+
     preserveModules: true,
-    external: ["react", "are-passive-events-supported", "use-latest"],
+    external: [],
   },
   {
     input: ["src/index.ts"],
