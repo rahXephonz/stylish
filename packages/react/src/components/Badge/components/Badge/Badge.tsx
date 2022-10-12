@@ -27,7 +27,7 @@ const Badge = React.forwardRef<HTMLSpanElement, React.PropsWithChildren<BadgePro
         return (
           <>
             {React.createElement(icon, { fill: "currentColor", size: 14, "aria-hidden": true })}
-            <Text scale={300}>{children}</Text>
+            <Text scale="sm">{children}</Text>
           </>
         );
       }

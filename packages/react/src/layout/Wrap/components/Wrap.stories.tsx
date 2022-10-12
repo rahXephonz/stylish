@@ -3,8 +3,8 @@ import { Story } from "@storybook/react";
 
 import { Box } from "layout/Box";
 import { Badge } from "components/Badge";
-import Wrap, { WrapProps } from "../Wrap";
-import WrapItem from "../WrapItem";
+import Wrap, { WrapProps } from "./Wrap";
+import WrapItem from "./WrapItem";
 
 export default {
   title: "Core/Layout/Wrap",

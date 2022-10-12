@@ -2,7 +2,7 @@ import React from "react";
 import { Story } from "@storybook/react";
 
 import { Box } from "layout/Box";
-import Stack, { StackProps } from "../Stack";
+import Stack, { StackProps } from "./Stack";
 
 export default {
   title: "Core/Layout/Stack",

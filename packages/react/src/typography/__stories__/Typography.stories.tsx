@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack } from "layout/Stack";
-import { Text } from "..";
+import { Text, HeadingScale, Heading, TextScale } from "..";
 
 export default {
   title: "Core/Foundations/Typography",
@@ -10,6 +10,9 @@ export default {
     },
   },
 };
+
+const headingScales: HeadingScale[] = ["2xl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"];
+const textScales: TextScale[] = ["lg", "md", "sm", "xs"];
 
 export const BrandFonts = () => (
   <Stack spacing="md" p="md" backgroundColor="grey02">
@@ -45,5 +48,33 @@ export const SystemFonts = () => (
     <Text display="block" fontSize={700} lineHeight={700} fontFamily="system" fontWeight={700}>
       System Bold
     </Text>
+  </Stack>
+);
+
+export const HeadingText = () => (
+  <Stack spacing="md">
+    {headingScales.map(scale => (
+      <Stack spacing="sm" padding="md" backgroundColor="grey02">
+        <Heading scale={scale}>We are make components for everyone</Heading>
+        <Heading as="p" scale="xxs" color="greymed04">
+          Heading - {scale}
+        </Heading>
+      </Stack>
+    ))}
+  </Stack>
+);
+
+export const BodyText = () => (
+  <Stack spacing="md">
+    {textScales.map(scale => (
+      <Stack spacing="sm" padding="md" backgroundColor="grey02">
+        <Text display="block" scale={scale}>
+          We are make components for everyone
+        </Text>
+        <Heading as="p" scale="xxs" color="greymed04">
+          Body Text - {scale}
+        </Heading>
+      </Stack>
+    ))}
   </Stack>
 );

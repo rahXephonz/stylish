@@ -11,16 +11,19 @@ import {
   componentStylesMixin,
   PseudoSystemProps,
 } from "system";
-import { textProps } from "utils";
 
-export type TextScale = 500 | 400 | 300 | 200;
+export type TextScale = "lg" | "md" | "sm" | "xs";
 
 export interface TextProps<ThemeType extends Theme = RequiredTheme> extends SxProps, AllSystemProps, PseudoSystemProps {
+  /** Color of the text. */
   color?: string;
+  /** React JSX or any constructor. */
   children?: React.ReactNode;
   /** Size value of the text. */
   scale?: ResponsiveValue<TextScale, ThemeType>;
 }
+
+const textProps = ["scale"];
 
 /**
  * This is a base `Text` element to handle typography elements.

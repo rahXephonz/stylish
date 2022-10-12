@@ -11,7 +11,7 @@ export default function App() {
     >
       <Stack spacing="lg" direction="vertical">
         <Box>
-          <Text scale={500}>Hello Worldsssssss</Text>
+          <Text scale="lg">Hello Worldsssssss</Text>
         </Box>
         <Box>
           <IconButton />

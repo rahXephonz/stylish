@@ -1,6 +1,6 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import Badge, { BadgeProps } from "../Badge";
+import Badge, { BadgeProps } from "./Badge";
 
 export default {
   title: "Core/Components/Badge/Badge",
