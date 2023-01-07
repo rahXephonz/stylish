@@ -7,6 +7,7 @@
     "no-use-before-define": "off",
     "space-before-function-paren": "off",
     "react/prop-types": "off",
+    "max-classes-per-file": "off",
     "react/no-unescaped-entities": "off",
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
