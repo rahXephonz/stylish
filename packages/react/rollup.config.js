@@ -4,6 +4,16 @@ import dts from "rollup-plugin-dts";
 import visualizer from "rollup-plugin-visualizer";
 import { terser } from "rollup-plugin-terser";
 
+const excludeLibs = [
+  "react",
+  "@stylish-ui/core",
+  "@stylish-ui/hooks",
+  "styled-system",
+  "styled-components",
+  "csstype",
+  "react-fast-compare",
+];
+
 export default [
   {
     input: ["src/index.ts"],
@@ -16,6 +26,7 @@ export default [
       typescript(),
 
       terser({
+        ecma: 2020,
         compress: true,
         module: true,
         toplevel: false,
@@ -31,7 +42,7 @@ export default [
       }),
     ],
     preserveModules: true,
-    external: ["react", "@stylish-ui/core", "styled-system", "styled-components", "@stylish-ui/hooks"],
+    external: [...excludeLibs],
   },
   {
     input: ["src/index.ts"],

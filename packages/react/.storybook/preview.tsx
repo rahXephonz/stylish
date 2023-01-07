@@ -1,5 +1,5 @@
 import React from "react";
-import { Story } from "@storybook/react";
+import type { Story } from "@storybook/react";
 import { StylishProvider } from "../src";
 
 export const parameters = {

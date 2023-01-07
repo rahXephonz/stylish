@@ -29,6 +29,7 @@ jspm_packages/
 
 # Optional npm cache directory
 .npm
+.nvm
 
 # Optional eslint cache
 .eslintcache
@@ -98,5 +99,19 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Cache
-.eslintcache
+# Not including main ts
+src/
+
+
+# Utility
+.eslintignore
+.vscode
+.editroconfig
+.eslintrc
+.eslintrc.js
+.gitignore
+.prettierignore
+.prettierrc
+assets
+lerna.json
+rollup.config.js

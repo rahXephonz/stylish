@@ -1,7 +1,7 @@
 import css from "@styled-system/css";
 import deepmerge from "deepmerge";
 import runIfFn from "utils/runIfFn";
-import { isEqual } from "lodash";
+import isEqual from "react-fast-compare";
 import { useMemo, useRef, ComponentProps } from "react";
 import { get } from "styled-system";
 import { useTheme } from "styled-components";
