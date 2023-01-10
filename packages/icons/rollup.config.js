@@ -22,7 +22,7 @@ export default [
     ],
 
     preserveModules: true,
-    external: [],
+    external: ["react"],
   },
   {
     input: ["src/index.ts"],

@@ -49,8 +49,7 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*",
-      "playgrounds/*"
+      "packages/**"
     ]
   }
 }

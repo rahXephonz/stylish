@@ -4,6 +4,7 @@ import { map } from "lodash-es";
 import Link from "next/link";
 import loadable from "@loadable/component";
 import { IconButton, Box, Stack, Wrap, WrapItem, Text, Badge } from "@stylish-ui/react";
+import { Belt, Cart } from "@stylish-ui/icons";
 import todosService from "../../services/todos";
 
 const LayoutLoadable = loadable(() => import("../../components/Layout"));
@@ -50,9 +51,11 @@ const HomePage = () => {
             </Text>
           </Box>
           <Box>
+            <Cart size={18} />
             <IconButton />
           </Box>
           <Box>
+            <Belt />
             <IconButton />
           </Box>
         </Stack>

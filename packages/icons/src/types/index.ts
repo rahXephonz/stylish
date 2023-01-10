@@ -5,5 +5,6 @@ export type BaseIconProps = {
 } & SVGProps<SVGSVGElement>;
 
 export const iconDefaultProps: BaseIconProps = {
-  size: 24,
+  size: 22,
+  fill: "none",
 };

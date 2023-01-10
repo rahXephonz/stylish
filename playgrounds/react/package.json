@@ -1,4 +1,8 @@
 {
+  "name": "@playgrounds/react",
+  "version": "1.0.0",
+  "author": "Ioofy",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next",
