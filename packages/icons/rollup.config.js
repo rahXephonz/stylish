@@ -2,6 +2,7 @@ import typescript from "rollup-plugin-typescript2";
 import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
 
+// TODO: Using external dist for every icons components
 export default [
   {
     input: ["src/index.ts"],

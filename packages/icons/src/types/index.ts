@@ -7,4 +7,5 @@ export type BaseIconProps = {
 export const iconDefaultProps: BaseIconProps = {
   size: 22,
   fill: "none",
+  stroke: "#1C1C1C",
 };
