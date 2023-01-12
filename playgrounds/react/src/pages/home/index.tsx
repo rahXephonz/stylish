@@ -27,11 +27,11 @@ const HomePage = () => {
             </Text>
           </Box>
           <Box>
-            <Cart size={18} />
+            <Cart size={20} />
             <IconButton />
           </Box>
           <Box>
-            <Belt size={18} />
+            <Belt size={20} />
             <IconButton />
           </Box>
         </Stack>
