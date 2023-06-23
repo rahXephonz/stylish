@@ -1,8 +1,8 @@
 import { tw } from "twind";
 import Link from "next/link";
 import loadable from "@loadable/component";
-import { IconButton, Box, Stack, Wrap, WrapItem, Text, Badge } from "@stylish-ui/react";
-import { Belt, Cart } from "@stylish-ui/icons";
+import { IconButton, Box, Stack, Wrap, WrapItem, Text, Badge, Button } from "@stylish-ui/react";
+import { Belt, Cart, ReactIcon } from "@stylish-ui/icons";
 
 const LayoutLoadable = loadable(() => import("../../components/Layout"));
 
@@ -34,6 +34,9 @@ const HomePage = () => {
             <Belt size={20} />
             <IconButton />
           </Box>
+          <Box>
+            <ReactIcon />
+          </Box>
         </Stack>
 
         <Wrap justifyContent="flex-start" sx={{ border: "1px solid red" }}>
@@ -55,6 +58,8 @@ const HomePage = () => {
             </Badge>
           ))}
         </Wrap>
+
+        <Button />
       </Box>
     </LayoutLoadable>
   );
